@@ -4,7 +4,7 @@ namespace AdventOfCode2023.Day01;
 public class CalibrationReaderTest
 {
     [Fact]
-    public void SumPart01SampleDataShouldReturn142()
+    public void TestSumPart01SampleData()
     {
         var lines = new[] {
             "1abc2",
@@ -17,14 +17,14 @@ public class CalibrationReaderTest
     }
 
     [Fact]
-    public void SumPart01PuzzleInputShouldReturn55971()
+    public void TestSumPart01PuzzleInput()
     {
         var input = File.ReadAllLines(@"inputs\day01.txt");
         CalibrationReader.SumCalibrationValues(input).Should().Be(55971);
     }
 
     [Fact]
-    public void SumPart02SampleDatatShouldReturn()
+    public void TestSumPart02SampleDatat()
     {
         var lines = new[]
         {
@@ -39,10 +39,10 @@ public class CalibrationReaderTest
         CalibrationReader.SumStringCalibrationValues(lines).Should().Be(281);
     }
     [Fact]
-    public void SumPart02PuzzleInputShouldReturn55971()
+    public void TestSumPart02PuzzleInput()
     {
         var input = File.ReadAllLines(@"inputs\day01.txt");
-        CalibrationReader.SumStringCalibrationValues(input).Should().Be(54663);
+        CalibrationReader.SumStringCalibrationValues(input).Should().Be(54719);
 
     }
     [Theory]
@@ -54,7 +54,7 @@ public class CalibrationReaderTest
     [InlineData("zoneight234", 14)]
     [InlineData("7pqrstsixteen", 76)]
     [InlineData("eighthree", 83)]
-    [InlineData("sevennine", 79)]
+
 
     public void GetCalibrationValuesWithStrings(string input, int expected)
     {

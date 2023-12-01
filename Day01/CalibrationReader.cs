@@ -32,47 +32,21 @@ public class CalibrationReader
 
     private static string ReplaceStringNumbers(string input)
     {
-        if (input.Length == 0) return string.Empty;
-        if (input.Length == 1) return input;
-
-        if (input.StartsWith("one"))
+        return input switch
         {
-            return "1" + ReplaceStringNumbers(input[1..]);
-        }
-        if (input.StartsWith("two"))
-        {
-            return "2" + ReplaceStringNumbers(input[1..]);
-        }
-        if (input.StartsWith("three"))
-        {
-            return "3" + ReplaceStringNumbers(input[1..]);
-        }
-        if (input.StartsWith("four"))
-        {
-            return "4" + ReplaceStringNumbers(input[1..]);
-        }
-        if (input.StartsWith("five"))
-        {
-            return "5" + ReplaceStringNumbers(input[1..]);
-        }
-        if (input.StartsWith("six"))
-        {
-            return "6" + ReplaceStringNumbers(input[1..]);
-        }
-        if (input.StartsWith("seven"))
-        {
-            return "7" + ReplaceStringNumbers(input[1..]);
-        }
-        if (input.StartsWith("eight"))
-        {
-            return "8" + ReplaceStringNumbers(input[1..]);
-        }
-        if (input.StartsWith("nine"))
-        {
-            return "9" + ReplaceStringNumbers(input[1..]);
-        }
-
-        return input[0] + ReplaceStringNumbers(input[1..]);
+            _ when input.Length == 0 => string.Empty,
+            _ when input.Length == 1 => input,
+            _ when input.StartsWith("one") => "1" + ReplaceStringNumbers(input[1..]),
+            _ when input.StartsWith("two") => "2" + ReplaceStringNumbers(input[1..]),
+            _ when input.StartsWith("three") => "3" + ReplaceStringNumbers(input[1..]),
+            _ when input.StartsWith("four") => "4" + ReplaceStringNumbers(input[1..]),
+            _ when input.StartsWith("five") => "5" + ReplaceStringNumbers(input[1..]),
+            _ when input.StartsWith("six") => "6" + ReplaceStringNumbers(input[1..]),
+            _ when input.StartsWith("seven") => "7" + ReplaceStringNumbers(input[1..]),
+            _ when input.StartsWith("eight") => "8" + ReplaceStringNumbers(input[1..]),
+            _ when input.StartsWith("nine") => "9" + ReplaceStringNumbers(input[1..]),
+            _ => input[0] + ReplaceStringNumbers(input[1..])
+        };
     }
 
 }
