@@ -44,7 +44,6 @@ public class Day02Test
         Day02.SumGamePowers(input).Should().Be(2286);
     }
 }
-
 internal class Day02
 {
     internal static int SumPossibleGameIds(string[] input)
