@@ -28,7 +28,7 @@ public class Day02Test
     public void TestPart02PuzzleData()
     {
         var input = File.ReadAllLines(@"inputs\day02.txt");
-        Day02.SumGamePowers(input).Should().Be(2406);
+        Day02.SumGamePowers(input).Should().Be(78375);
     }
     [Fact]
     public void TestPart02SampleData()
