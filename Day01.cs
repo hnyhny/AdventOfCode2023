@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
-namespace AdventOfCode2023.Day01;
+namespace AdventOfCode2023;
 
-public class CalibrationReader
+public class Day01
 {
     public static int SumCalibrationValues(string[] inputs)
     {

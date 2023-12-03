@@ -1,7 +1,7 @@
 using FluentAssertions;
-namespace AdventOfCode2023.Day01;
+namespace AdventOfCode2023;
 
-public class CalibrationReaderTest
+public class Day01Test
 {
     [Fact]
     public void TestSumPart01SampleData()
@@ -13,14 +13,14 @@ public class CalibrationReaderTest
             "treb7uchet"
         };
 
-        CalibrationReader.SumCalibrationValues(lines).Should().Be(142);
+        Day01.SumCalibrationValues(lines).Should().Be(142);
     }
 
     [Fact]
     public void TestSumPart01PuzzleInput()
     {
         var input = File.ReadAllLines(@"inputs\day01.txt");
-        CalibrationReader.SumCalibrationValues(input).Should().Be(55971);
+        Day01.SumCalibrationValues(input).Should().Be(55971);
     }
 
     [Fact]
@@ -36,13 +36,13 @@ public class CalibrationReaderTest
             "zoneight234",
             "7pqrstsixteen"
         };
-        CalibrationReader.SumStringCalibrationValues(lines).Should().Be(281);
+        Day01.SumStringCalibrationValues(lines).Should().Be(281);
     }
     [Fact]
     public void TestSumPart02PuzzleInput()
     {
         var input = File.ReadAllLines(@"inputs\day01.txt");
-        CalibrationReader.SumStringCalibrationValues(input).Should().Be(54719);
+        Day01.SumStringCalibrationValues(input).Should().Be(54719);
 
     }
     [Theory]
@@ -58,6 +58,6 @@ public class CalibrationReaderTest
 
     public void GetCalibrationValuesWithStrings(string input, int expected)
     {
-        CalibrationReader.ParseStringCalibrationValues(input).Should().Be(expected);
+        Day01.ParseStringCalibrationValues(input).Should().Be(expected);
     }
 }
