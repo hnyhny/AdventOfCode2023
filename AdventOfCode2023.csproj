@@ -30,7 +30,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Day04\" />
     <Folder Include="inputs\" />
   </ItemGroup>
 

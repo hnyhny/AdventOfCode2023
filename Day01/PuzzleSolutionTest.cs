@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 namespace AdventOfCode2023.Day01;
 
-public class SolutionTest
+public class PuzzleSolutionTest
 {
     [Theory]
     [InlineData(@"Day01\sample.part01.txt", 142)]
