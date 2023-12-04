@@ -24,9 +24,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="inputs\*">
+    <None Update="Day*\*.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Day04\" />
+    <Folder Include="inputs\" />
   </ItemGroup>
 
 </Project>

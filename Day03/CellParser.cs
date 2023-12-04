@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using System.Text.RegularExpressions;
 
-namespace AdventOfCode2023
+namespace AdventOfCode2023.Day03
 {
     internal static class CellParser
     {

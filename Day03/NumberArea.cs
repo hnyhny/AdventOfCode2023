@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2023;
+﻿namespace AdventOfCode2023.Day03;
 
 internal record NumberArea(int Value, int Left = 0, int Right = 0, int Top = 0, int Bottom = 0)
 {

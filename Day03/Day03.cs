@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
 
-namespace AdventOfCode2023;
+namespace AdventOfCode2023.Day03;
 
 public class Day03
 {

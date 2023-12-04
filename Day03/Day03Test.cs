@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
 
-namespace AdventOfCode2023;
+namespace AdventOfCode2023.Day03;
 
 public class Day03Test
 {
@@ -17,7 +17,7 @@ public class Day03Test
             "...$.*....",
             ".664.598..",
         ];
-    private readonly string[] puzzleInput = File.ReadAllLines(@"inputs\day03.txt");
+    private readonly string[] puzzleInput = File.ReadAllLines(@"Day03\puzzle.txt");
 
     public void TestPart01Puzzle()
     {

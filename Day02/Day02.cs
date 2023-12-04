@@ -1,13 +1,13 @@
 ﻿using FluentAssertions;
 using System.Text.RegularExpressions;
 
-namespace AdventOfCode2023;
+namespace AdventOfCode2023.Day02;
 public class Day02Test
 {
     [Fact]
     public void TestPart01PuzzleData()
     {
-        var input = File.ReadAllLines(@"inputs\day02.txt");
+        var input = File.ReadAllLines(@"Day02\puzzle.txt");
         Day02.SumPossibleGameIds(input).Should().Be(2406);
     }
 
@@ -27,7 +27,7 @@ public class Day02Test
     [Fact]
     public void TestPart02PuzzleData()
     {
-        var input = File.ReadAllLines(@"inputs\day02.txt");
+        var input = File.ReadAllLines(@"Day02\puzzle.txt");
         Day02.SumGamePowers(input).Should().Be(78375);
     }
     [Fact]
