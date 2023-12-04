@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2023.Day04;
 
-public class Card
+public record Card
 {
     public int Id { get; init; }
     public int[] WinsCards => Enumerable.Range(Id + 1, WinningNumbersCount).ToArray();
