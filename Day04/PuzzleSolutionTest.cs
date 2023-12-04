@@ -9,23 +9,25 @@ public class PuzzleSolutionTest
     public void TestPart01(string filepath, int expected)
     {
         var input = File.ReadAllLines(filepath);
-        Day04.Part01(input).Should().Be(expected);
+        input.Select(CardParser.ParseCard)
+             .Sum(c => c.Value)
+             .Should().Be(expected);
     }
-}
-public class CardTest
-{
-    public static IEnumerable<object[]> CardTestData = new[]
-    {
-       new object[] { new[] { 1, 2, 3 }, new[] { 1 }, 1 },
-       new object[] { new[] { 1, 2, 3 }, new[] { 1, 2 }, 2 },
-       new object[] { new[] { 1, 2, 3 }, new[] { 1, 2, 3}, 4 },
-
-    };
     [Theory]
-    [MemberData(nameof(CardTestData))]
-    public void Foo(int[] winnerNumbers, int[] playerNumbers, int expected)
+    [InlineData(@"Day04\sample.part01.txt", 30)]
+    [InlineData(@"Day04\puzzle.txt", 26426)]
+    public void TestPart02(string filepath, int expected)
     {
-        var card = new Card(winnerNumbers, playerNumbers);
-        card.Value.Should().Be(expected);
+        var input = File.ReadAllLines(filepath);
+        var cards = input.Select(CardParser.ParseCard).ToArray();
+        var cardAmount = cards.ToDictionary(c => c.Id, _ => 1);
+        foreach (var card in cards)
+        {
+            foreach (var id in card.WinsCards)
+            {
+                cardAmount[id] += (cardAmount[card.Id]);
+            }
+        }
+        cardAmount.Values.Sum().Should().Be(expected);
     }
 }
